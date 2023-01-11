@@ -9,15 +9,18 @@
       
 </head>
 <body>
+    {% block content %}
     <form action = 'http://127.0.0.1:5000/register' method="post">
-        <label>register</label><br/><br/>
-        <label for = "username">username</label><br/>
-        <input type="text" name="uname"  ><br/>
-        <label for = "email" >email </label><br/>
-        <input type="email" name="email" ><br/>
-        <label for = "password" >password </label><br/>
-        <input type="password" name="pass" ><br/><br/>
-        <button type="submit">submit</button>
-    </form>
+      {{form.username.label()}} </br>
+      {{form.username(placeholder="user name") }}</br>
+      {{form.email.label()}}</br>
+      {{form.email(placeholder="email")}}</br>
+      {{form.password1.label()}}</br>
+      {{form.password1(placeholder="password")}}</br>
+      {{form.password2.label()}}</br>
+      {{form.password2(placeholder="password")}}</br></br>
+      {{form.submit()}}
+
+    {% endblock %}
 </body>
 </html>
