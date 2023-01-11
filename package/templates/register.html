@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>register</title>
+    
+      
+</head>
+<body>
+    {% block content %}
+    <form action = 'http://127.0.0.1:5000/register' method="post">
+      {{form.username.label()}} </br>
+      {{form.username(placeholder="user name") }}</br>
+      {{form.email.label()}}</br>
+      {{form.email(placeholder="email")}}</br>
+      {{form.password1.label()}}</br>
+      {{form.password1(placeholder="password")}}</br>
+      {{form.password2.label()}}</br>
+      {{form.password2(placeholder="password")}}</br></br>
+      {{form.submit()}}
+
+    {% endblock %}
+</body>
+</html>
