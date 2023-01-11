@@ -6,9 +6,6 @@ from package.loginandegform import loginform,registrationform
 from package.dbmodels import usrlogin
 
 
-
-
-
 with app.app_context():
     db.create_all()
 
