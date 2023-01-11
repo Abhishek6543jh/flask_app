@@ -1,23 +1,13 @@
-from flask import Flask,render_template,redirect,request,url_for
-from flask_sqlalchemy import SQLAlchemy
-from flask import session
-from loginandegform import registrationform,loginform
+
+from package import *
+
+from flask import request,render_template,url_for,redirect
+from package.loginandegform import loginform,registrationform
+from package.dbmodels import usrlogin
 
 
-app = Flask(__name__)
-app.debug=True
-app.config['SECRET_KEY']=['myscretkey']
-app.config['SQLALCHEMY_DATABASE_URI']='sqlite:///users.db'
-app.config['SESSION_PERMANENT'] = True
-db = SQLAlchemy(app)
 
-#databse for userdetails
 
-class usrlogin(db.Model):
-        id = db.Column(db.Integer, primary_key=True)
-        username = db.Column(db.String(80),unique=True, nullable=False)
-        email = db.Column(db.String(120),unique=True, nullable=False)
-        password = db.Column(db.String(80),unique=True, nullable=False)
 
 with app.app_context():
     db.create_all()
