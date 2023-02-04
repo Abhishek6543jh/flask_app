@@ -2,11 +2,11 @@ from flask_wtf import *
 from wtforms import *
 
 class registrationform(FlaskForm):
-    username = StringField(label="User Name")
+    username = StringField(label="Username")
     email = EmailField(label="email")
     password1=PasswordField(label="password")
     password2=PasswordField(label="password")
-    submit = SubmitField(label="submit")
+    submit = SubmitField(label="submit",id="submit")
 
 
 class loginform(FlaskForm):

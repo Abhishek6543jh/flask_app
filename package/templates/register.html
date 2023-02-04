@@ -5,11 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>register</title>
-    
+    <nav>
+      <a href="/">HOME</a>
+      <a href="/about">about</a>
+      
+    </nav>
       
 </head>
+
 <body>
     {% block content %}
+    <div class="form1">
     <form action = 'http://127.0.0.1:5000/register' method="post">
       {{form.username.label()}} </br>
       {{form.username(placeholder="user name") }}</br>
@@ -22,5 +28,25 @@
       {{form.submit()}}
 
     {% endblock %}
+  </div>
+  <style>
+        body{
+      background-color: rgba(0, 170, 255, 0.355);
+      align-items: center;
+    }
+    .form1{
+      margin-top: 300px;
+      margin-left: 567px;
+      width: 40px;
+      
+    }
+      
+      
+    form {
+    width: 350px;
+    border: 2px solid black;
+    padding: 10px;
+    }
+  </style>
 </body>
 </html>

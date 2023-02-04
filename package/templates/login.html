@@ -5,11 +5,15 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>login</title>
- 
+  <nav>
+    <a href="/">HOME</a>
+    <a href="/about">about</a>
+  </nav>
   
 </head>
 <body>
-  <form  action = "http://127.0.0.1:5000/login" method="post">
+   <div class = "form1">
+    <form  action = "http://127.0.0.1:5000/login" method="post">
     <h>Login</h><br/><br/>
     {% block content %}
     {{form.username.label()}}</br>
@@ -18,10 +22,33 @@
     {{form.password()}}</br></br>
     {{form.login()}}
     {% endblock %}
-      <a href="/register">click here to regester</a>
+    <a href="/register">click here to regester</a>
+    </form>
+    </div>
+  <style>
+    body{
+      background-color: rgba(0, 170, 255, 0.355);
+      align-items: center;
+    }
+    .form1{
+      margin-top: 300px;
+      margin-left: 567px;
+      width: 40px;
+      
+    }
+      
+      
+    form {
+    width: 350px;
+    border: 2px solid black;
+    padding: 10px;
+    }
+    
+    
 
     
-  </form>
+    
   
+  </style>
 </body>
 </html>
