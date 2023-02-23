@@ -16,7 +16,7 @@ def home():
             return redirect(url_for('login'))
             
             
-       return render_template('home.html') 
+       return render_template('index.html') 
 
 #login page
 @app.route("/login",methods=['POST','GET'])
